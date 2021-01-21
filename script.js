@@ -126,6 +126,14 @@ function keyUpHandler(e) {
     }
 }
 
+// Move mouse to move paddle
+function mouseMoveHandler(e) {
+    var relativeX = e.clientX - canvas.offsetLeft;
+    if(relativeX > 0 && relativeX < canvas.width) {
+        paddleX = relativeX - paddleWidth/2;
+    }
+}
+
 // Draw the bricks
 function drawBricks() {
     for(var c=0; c<brickColumnCount; c++) {
@@ -175,4 +183,5 @@ function drawScore() {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
 var interval = setInterval(draw, 10);
