@@ -152,7 +152,7 @@ function renderObjectsOnCanvas() {
         ball.y = canvas.height - 30;
         ball.dx = 3;
         ball.dy = -3;
-        paddleX = (canvas.width - paddleWidth) / 2;
+        paddle.x = paddleX;
       }
     }
   }
