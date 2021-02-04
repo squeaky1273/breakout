@@ -1,5 +1,5 @@
 // ---------------------------------------------
-// Score Class
+// Score Class [work in progress]
 // ---------------------------------------------
 class Score {
   constructor(color = '#000000', score = 0, font = '20px Comic-San') {

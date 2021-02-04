@@ -1,5 +1,5 @@
 // ---------------------------------------------
-// Lives Class
+// Lives Class [work in progress]
 // ---------------------------------------------
 class Lives {
   constructor(x, y, color = '#000000', lives, font) {

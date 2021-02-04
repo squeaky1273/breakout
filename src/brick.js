@@ -1,8 +1,8 @@
 // ---------------------------------------------
-// Brick Class
+// Brick Class [work in progress]
 // ---------------------------------------------
 class Brick {
-  constructor(x, y, brickWidth = 75, brickHeight = 20, color) {
+  constructor(x, y, brickWidth = 75, brickHeight = 20, color = '#0095DD') {
     this.x = x;
     this.y = y;
     this.brickWidth = brickWidth;

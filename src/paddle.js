@@ -1,5 +1,5 @@
 // ---------------------------------------------
-// Paddle Class
+// Paddle Class [work in progress]
 // ---------------------------------------------
 class Paddle {
   constructor(x, y, paddleWidth = 75, paddleHeight = 10, color) {
@@ -10,9 +10,14 @@ class Paddle {
     this.color = color;
   }
 
-  render(ctx) {
+  render(canvas, ctx, rightPressed, leftPressed) {
+    if (rightPressed && this.x < canvas.width - this.width) {
+      this.x -= 7;
+    } else if (leftPressed && this.x > 0) {
+      this.x += 7;
+    }
     ctx.beginPath();
-    ctx.rect(this.x, this.y, this.paddleWidth, this.paddleHeight);
+    ctx.rect(this.x, canvas.height - this.height, this.width, this.height);
     ctx.fillStyle = this.color;
     ctx.fill();
     ctx.closePath();
