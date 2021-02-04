@@ -10,16 +10,18 @@
 // import Ball from './ball.js';
 // import Brick from './brick.js';
 // import Paddle from './paddle.js';
+import Sprite from './sprite.js';
 
 /// CLASSES
-class Ball {
-  constructor() {
-    this.ballRadius = 10;
-    this.color = '#0095DD';
-    this.x = 250;
-    this.y = 160;
-    this.dx = 2;
-    this.dy = 2;
+class Ball extends Sprite {
+  constructor(x, y, dx = 2, dy = -2, ballRadius = 10, color = '#0095DD') {
+    super(x, y);
+    this.ballRadius = ballRadius;
+    this.color = color;
+    this.x = x;
+    this.y = y;
+    this.dx = dx;
+    this.dy = dy;
   }
 
   // this method draws the ball
@@ -65,7 +67,7 @@ class Ball {
     }
   }
 }
-class Brick {
+class Brick { // extends Sprite {
   constructor(argX, argY, argStatus) {
     this.x = argX;
     this.y = argY;
@@ -102,8 +104,9 @@ class Brick {
   }
 }
 
-class Paddle {
+class Paddle { // extends Sprite {
   constructor(canvas) {
+    // super(x, y);
     this.color = '#0095DD';
     this.width = 75;
     this.height = 10;
@@ -129,8 +132,9 @@ class Paddle {
   }
 }
 
-class Score {
+class Score { // extends Sprite {
   constructor(color = '#000000', score = 0, font = '20px Comic-San') {
+    // super(x, y);
     this.color = color;
     this.score = score;
     this.font = font;
@@ -147,8 +151,9 @@ class Score {
   }
 }
 
-class Lives {
+class Lives { // extends Sprite {
   constructor(x, y, color = '#000000', lives, font) {
+    // super(x, y);
     this.x = x;
     this.y = y;
     this.color = color;
