@@ -1,4 +1,5 @@
 # 2D Breakout game
+![screenshot.png](screenshot.png)
 
 * [ About. ](#about)
 * [ Run. ](#run)
