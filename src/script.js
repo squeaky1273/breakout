@@ -10,18 +10,17 @@
 // import Ball from './ball.js';
 // import Brick from './brick.js';
 // import Paddle from './paddle.js';
-import Sprite from './sprite.js';
+// import Sprite from './sprite.js';
 
 /// CLASSES
-class Ball extends Sprite {
-  constructor(x, y, dx = 2, dy = -2, ballRadius = 10, color = '#0095DD') {
-    super(x, y);
-    this.ballRadius = ballRadius;
-    this.color = color;
-    this.x = x;
-    this.y = y;
-    this.dx = dx;
-    this.dy = dy;
+class Ball {
+  constructor() {
+    this.ballRadius = 10;
+    this.color = '#0095DD';
+    this.x = 250;
+    this.y = 160;
+    this.dx = 2;
+    this.dy = 2;
   }
 
   // this method draws the ball
